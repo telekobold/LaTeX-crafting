@@ -1,0 +1,31 @@
+
+# Ignore the following LaTeX-related files in the whole project:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.dvi
+*.xdv
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+*.nav
+*.pre
+*.snm
+*.vrb
+*.synctex.gz
+*.tex.backup
+
+# Ignore PDF files (compiled from LaTeX source):
+*.pdf
