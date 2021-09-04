@@ -4,6 +4,7 @@
 \usepackage{forloop}
 %\usepackage{verbatim}
 \usepackage{xassoccnt}
+\usepackage{lipsum}
 
 % New counter realpage:
 \newcounter{realpage}
@@ -13,28 +14,26 @@
 }
 
 \renewcommand{\headrulewidth}{0pt} % Set the header's length to zero
-\fancyhead{} % Remove the header's content
-%\setlength\footskip{40pt} % set the distance between footer and text to 40pt
-
-\pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % Clear all header and footer fields
+\pagestyle{fancy} % Apply fancyhdr
+\setlength\footskip{35pt} % set the distance between footer and text to 40pt
 
 % Add chicks to the center of every footer depending on the current value of realpage:
 \newcounter{ct}
-%\setcounter{ct}{0} % unnecessary due to the for loop
 % Since therealpage starts with 1, ct must start with 0.
 \fancyfoot[C]{
  \forloop{ct}{0}{\value{ct} < \therealpage}
-  {
-   \includegraphics[height=30pt]{front-facing-baby-chick_Mozilla.png}
-  }
+ {
+  \includegraphics[height=30pt]{front-facing-baby-chick_Mozilla.png}
  }
+}
 
+% TODO: Einbau in Dokumentklasse, sodass man nur noch \usepackage{countingChick} eingeben muss
 % TODO: Küken auch auf der ersten Seite ausgeben
+% TODO: Ev. Counter-Code verbessern
 % TODO: Umgang mit Dokumenten mit mehr als 36 Seiten
 % TODO: Küken in der letzten Zeile sollten unten nicht abgeschnitten sein
 % TODO: Küken sollten immer untereinander zentriert sein
-% TODO: Einbau in Dokumentklasse, sodass man nur noch \usepackage{countingChick} eingeben muss
 
 \title{CountingChick development document}
 \author{telekobold}
@@ -49,7 +48,7 @@
 f
 \newpage
 
-f
+\lipsum
 \newpage
 
 f
