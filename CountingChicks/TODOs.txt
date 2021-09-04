@@ -1,7 +1,11 @@
 
+Für Version 0.1:
+- Vor Veröffentlichung von Version 0.1 Test-Datei in die .gitignore aufnehmen
 - Küken auch auf der ersten Seite ausgeben
-- Ev. Counter-Code verbessern
+
+Nächste Version:
+- Ev. Refactoring des Counter-Codes
+- Küken sollten immer untereinander zentriert sein
 - Umgang mit Dokumenten mit mehr als 27 Seiten:
   - Die Küken zw. 27 und 36 sollten unten nicht abgeschnitten sein
   - Bei mehr als 36 Seiten werden keine weiteren Küken mehr im sichtbaren Bereich erzeugt (ohne dass eine Warnung oder Badbox geworfen wird)
-- Küken sollten immer untereinander zentriert sein
