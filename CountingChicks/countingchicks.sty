@@ -1,0 +1,30 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01] % minimum required LaTeX version to run this package
+\ProvidesPackage{countingchicks}[2021/09/04]
+
+\RequirePackage{fancyhdr}
+\RequirePackage{xassoccnt}
+\RequirePackage{forloop}
+\RequirePackage{graphicx}
+
+% New counter `realpage`:
+\newcounter{realpage}
+\DeclareAssociatedCounters{page}{realpage}
+\AtBeginDocument{
+  \stepcounter{realpage}
+}
+
+\renewcommand{\headrulewidth}{0pt} % Remove the header (set it's length to zero)
+\fancyhf{} % Clear all header and footer fields
+\pagestyle{fancy} % Apply fancyhdr
+\setlength\footskip{35pt} % distance between footer and text
+
+% Add chicks to the center of every footer depending on the current value of realpage:
+\newcounter{ct}
+\fancyfoot[C]{
+ \forloop{ct}{0}{\value{ct} < \therealpage} % Since therealpage starts with 1, ct must start with 0.
+ {
+  \includegraphics[height=30pt]{front-facing-baby-chick_Mozilla.png}
+ }
+}
+
+\endinput
