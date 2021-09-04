@@ -1,0 +1,7 @@
+
+- Küken auch auf der ersten Seite ausgeben
+- Ev. Counter-Code verbessern
+- Umgang mit Dokumenten mit mehr als 27 Seiten:
+  - Die Küken zw. 27 und 36 sollten unten nicht abgeschnitten sein
+  - Bei mehr als 36 Seiten werden keine weiteren Küken mehr im sichtbaren Bereich erzeugt (ohne dass eine Warnung oder Badbox geworfen wird)
+- Küken sollten immer untereinander zentriert sein
