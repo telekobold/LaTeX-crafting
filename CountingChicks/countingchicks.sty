@@ -16,6 +16,7 @@
 \renewcommand{\headrulewidth}{0pt} % Remove the header (set it's length to zero)
 \fancyhf{} % Clear all header and footer fields
 \pagestyle{fancy} % Apply fancyhdr
+\fancypagestyle{plain}{} % So that the changed page style is also applied to the first page if \maketitle is used there.
 \setlength\footskip{35pt} % distance between footer and text
 
 % Add chicks to the center of every footer depending on the current value of realpage:
