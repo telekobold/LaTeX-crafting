@@ -1,8 +1,4 @@
 
-Für Version 0.1:
-- Vor Veröffentlichung von Version 0.1 Test-Datei in die .gitignore aufnehmen
-- Küken auch auf der ersten Seite ausgeben
-
 Nächste Version:
 - Ev. Refactoring des Counter-Codes
 - Küken sollten immer untereinander zentriert sein
