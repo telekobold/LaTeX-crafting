@@ -1,14 +1,16 @@
 % countingchicks.sty
+%
 % Copyright 2021 Michael Merz <mail@telekobold.de>
 %
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License, version 1.3c.
-% The license text is available under
-% https://www.latex-project.org/lppl/lppl-1-3c.txt
+% This work may be distributed and/or modified under the conditions of the 
+% LaTeX Project Public License, version 1.3c. The license text is available 
+% under https://www.latex-project.org/lppl/lppl-1-3c.txt
 %
 % This work has the LPPL maintenance status `author-maintained'.
 
-\NeedsTeXFormat{LaTeX2e}[1994/06/01] % minimum required LaTeX version to run this package
+% minimum required LaTeX version to run this package:
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]  
+
 \ProvidesPackage{countingchicks}[2021/09/04]
 
 \RequirePackage{fancyhdr}
@@ -26,13 +28,16 @@
 \renewcommand{\headrulewidth}{0pt} % Remove the header (set it's length to zero)
 \fancyhf{} % Clear all header and footer fields
 \pagestyle{fancy} % Apply fancyhdr
-\fancypagestyle{plain}{} % So that the changed page style is also applied to the first page if \maketitle is used there.
+\fancypagestyle{plain}{} % So that the changed page style is also applied to the 
+                         % first page if \maketitle is used there.
 \setlength\footskip{35pt} % distance between footer and text
 
-% Add chicks to the center of every footer depending on the current value of realpage:
+% Add chicks to the center of every footer depending on the current value of 
+% realpage:
 \newcounter{ct}
 \fancyfoot[C]{
- \forloop{ct}{0}{\value{ct} < \therealpage} % Since therealpage starts with 1, ct must start with 0.
+ % Since therealpage starts with 1, ct must start with 0:
+ \forloop{ct}{0}{\value{ct} < \therealpage}
  {
   \includegraphics[height=30pt]{front-facing-baby-chick_Mozilla.png}
  }
